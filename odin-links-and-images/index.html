@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Links Images</title>
+</head>
+<body>
+    <h1>Homepage</h1>
+
+<!-- LINKS -->
+
+    <!-- Hyperling needs Anchor and href destination (address). Without href it just act as plain text. -->
+        <p><a>About The Odin Project</a></p>
+
+    <!-- This will open the link within the same tab/window -->
+        <a href="https://www.theodinproject.com/about">About The Odin Project</a>
+
+    <!-- While href specifies the destination link, target specifies where the linked resource will be opened.
+    If it is not present, then, by default, it will take on the _self value which opens the link in the current tab. 
+    To open the link in a new tab or window (depends on browser settings) you can set it to _blank as follows:-->
+        <p><a href="https://www.theodinproject.com/about" target="_blank" rel="noopener noreferrer">About The Odin Project</a></p>
+    <!-- The noopener value prevents the opened link from gaining access to the webpage from which it was opened. 
+    The noreferrer value prevents the opened link from knowing which webpage or resource has a link (or ‘reference’) to it. 
+    It also includes the noopener behaviour and thus can be used by itself as well.-->
+ 
+        <p><a href="about.html">About</a></p>
+    <!-- This works because the about page is in the same directory so we can use it's name as the href value -->
+
+    <!-- If we move the about page in a different directory, (pages) we need to adjust our href as shown bellow -->
+        <p><a href="pages/about.html">About</a></p>
+
+    <!-- In many cases, this will work just fine; however, you can still run into unexpected issues with this approach. 
+    Prepending ./ before the link will in most cases prevent such issues. 
+    By adding ./ you are specifying to your code that it should start looking for the file/directory relative 
+    to the current directory. -->
+        <p><a href="./pages/about.html">About</a></p>
+
+<!-- IMAGES -->
+
+    <!-- SRC Attribute 
+        To display an image in HTML we use the <img> element. Unlike the other elements we have encountered, 
+        the <img> element is self-closing. Empty, self-closing HTML elements do not need a closing tag.
+        Instead of wrapping content with an opening and closing tag, it embeds an image into the page using a src attribute 
+        which tells the browser where the image file is located. The src attribute works much like the href attribute 
+        for anchor tags. It can embed an image using both absolute and relative paths.-->
+        <!--For example, using an absolute path we can display an image located on The Odin Project site:-->
+            <img src="https://www.theodinproject.com/mstile-310x310.png">
+    
+        <!-- Start looking straight from directory ./ -->
+        <img src="./images/dog.jpg">
+
+    <!-- Adding ALT attribute
+        Besides the src attribute, every image element must also have an alt (alternative text) attribute.
+        The alt attribute is used to describe an image. It will be used in place of the image if it cannot be loaded. 
+        It is also used with screen readers to describe what the image is to visually impaired users.
+        This is how the The Odin Project logo example we used earlier looks with an alt attribute included: -->
+             <img src="https://www.theodinproject.com/mstile-310x310.png" alt="The Odin Project Logo">
+
+        <!--Image size attributes 
+        While not strictly required, specifying height and width attributes in image tags helps the browser 
+        layout the page without causing the page to jump and flash.
+        It is a good habit to always specify these attributes on every image, even when 
+        the image is the correct size or you are using CSS to modify it -->
+            <img src="https://www.theodinproject.com/mstile-310x310.png" alt="The Odin Project Logo" height="310" width="310">
+
+
+
+</body>
+</html>
